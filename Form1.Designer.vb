@@ -71,9 +71,9 @@ Partial Class Form1
         Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Italic)
         Me.Label2.Location = New System.Drawing.Point(15, 156)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(208, 19)
+        Me.Label2.Size = New System.Drawing.Size(207, 19)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Auto zatwierdzanie ( po 1.5s ) :"
+        Me.Label2.Text = "Auto. zatwierdzanie po czasie :"
         '
         'CheckBox1
         '

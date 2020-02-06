@@ -8,10 +8,12 @@ Public Class Form1
     Private kod_poczatkowy As String
     Private pliki() As String
     Private SR As StreamReader
+    Private SRczas As StreamReader
     Private check As Boolean
     Private Condition As Boolean
     Private SzukajBool As Boolean
     Public lokalizacja_pdf
+    Private czas As Integer
 
     Public Sub SprawadzLokalizacje(sender As Object, e As EventArgs)
         SR = New StreamReader("lokalizacja.txt")
@@ -28,6 +30,9 @@ Public Class Form1
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        SRczas = New StreamReader("czas_opoznienia_[ms].txt")
+        czas = SRczas.ReadLine
+        Timer1.Interval = czas
         Timer1.Stop()
         Timer1.Start()
         If (CheckBox1.Checked) Then
